@@ -241,14 +241,13 @@ input[type='number']::-webkit-outer-spin-button {
 
   .content {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: block;
     padding: 0;
   }
 
   .card-container {
     width: 30%;
-    top: 390px;
+    top: 187px;
     left: 5%;
     padding: 0;
     display: flex;
@@ -260,8 +259,7 @@ input[type='number']::-webkit-outer-spin-button {
   .form {
     min-width: 381px;
     max-width: 381px;
-    margin: 0;
-    margin-left: 140px;
+    margin: 275px 227px auto 44%;
   }
 
   .form-control .date {
@@ -275,34 +273,36 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .card-front {
-    width: 360px;
-    height: 200px;
+    width: 447px;
+    height: 245px;
     transform: translate(0);
-    padding: 22px;
+    padding: 28px 26px 27px 32px;
   }
 
   .card-front .logo {
     width: 84px;
     height: 47px;
-    margin-bottom: 44px;
+    margin-bottom: 64px;
   }
 
   .card-front .card-number {
-    font-size: 22px;
+    font-size: 28px;
     margin-bottom: 26px;
   }
 
   .card-front .details {
-    font-size: 12px;
+    font-size: 14px;
   }
+
 
   .card-front small {
     font-size: 14px;
     letter-spacing: 2px;
   }
+
   .card-back {
-    width: 360px;
-    height: 200px;
+    width: 447px;
+    height: 245px;
     transform: translate(94px, 37px);
   }
 
@@ -325,17 +325,27 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 @media (min-width: 1440px) {
+
   .form {
     min-width: 381px;
     max-width: 381px;
-    margin: 0;
-    margin-left: 120px;
+    margin: 275px 227px auto 36.47%;
+  }
+
+  .background {
+    min-width: 483px;
+  }
+
+  .content {
+    width: 100%;
+    display: block;
+    padding: 0;
   }
 
   .card-container {
     width: 40%;
-    top: 350px;
-    left: 10%;
+    top: 187px;
+    left: 11.39%;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -343,39 +353,17 @@ input[type='number']::-webkit-outer-spin-button {
     height: 500px;
   }
 
-  .card-front {
-    width: 447px;
-    height: 245px;
-    transform: translate(0);
-    padding: 28px 26px 27px 32px;
-  }
-
-  .card-front .details {
-    font-size: 14px;
-  }
-
-  .card-front .logo {
-    margin-bottom: 64px;
-  }
-
-  .card-front .card-number {
-    font-size: 28px;
-    margin-bottom: 26px;
-  }
-
-  .card-back {
-    width: 447px;
-    height: 245px;
-    transform: translate(94px, 37px);
-  }
-
   .card-back .cvc {
     font-size: 14px;
   }
 }
 
-@media (min-width: 1700px) {
+@media(min-width: 1700px) {
+
   .form {
-    margin-left: 0px;
+    min-width: 381px;
+    max-width: 381px;
+    margin: 275px 227px auto 32%;
   }
 }
+
