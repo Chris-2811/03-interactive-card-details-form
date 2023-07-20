@@ -79,7 +79,7 @@ input[type='number']::-webkit-outer-spin-button {
   border-radius: 8px;
   border: 1px solid var(--neutral-light-grayish-violet);
   height: 45px;
-  padding: 11px;
+  padding: 16px;
   display: block;
 }
 
@@ -283,7 +283,7 @@ input[type='number']::-webkit-outer-spin-button {
     width: 447px;
     height: 245px;
     transform: translate(0);
-    padding: 28px 26px 27px 32px;
+    padding: 28px 26.5px 27px 32px;
   }
 
   .card-front .logo {
