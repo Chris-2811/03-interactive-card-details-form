@@ -232,3 +232,4 @@ continueBtn.addEventListener('click', (e) => {
   cardMonthEl.innerText = '00';
   cardYearEl.innerText = '00';
 });
+
