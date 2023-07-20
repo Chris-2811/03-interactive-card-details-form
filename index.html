@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <div class="content" id="content">
+      <form class="form" id="form">
+        <div class="form-control">
+          <label for="cardholder" >Cardholder Name</label>
+          <div class="wrapper"><input type="text" id="cardholder" placeholder="e.g Jane Appleseed" /></div>
+          <small>Error Message</small>
+        </div>
+        <div class="form-control">
+          <label for="cardnumber">Card Number</label>
+          <div class="wrapper">
+            <input
+              type="number"
+              id="cardnumber"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+          </div>
+          <small>Error message</small>
+        </div>
+
+        <div class="container-details">
+          <div class="form-control">
+            <label for="date">Exp. Date (MM/YY)</label>
+            <div class="date" id="date">
+              <div class="wrapper"><input type="number" placeholder="MM" id="month" /></div>
+              <div class="wrapper"><input type="number" placeholder="YY" id="year" /></div>
+            </div>
+            <small>Error Message</small>
+          </div>
+
+          <div class="form-control">
+            <label for="cvc">CVC</label>
+            <div class="wrapper"><input type="number" placeholder="e.g 123" id="cvc" /></div>
+            <small>Error Message</small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Confirm</button>
+      </form>
+    </div>
+
+    <div class="card-container">
+      <div class="card-front">
+        <div class="logo">
+          <img src="images/card-logo.svg" alt="" />
+        </div>
+        <div class="card-number" id="number">0000 0000 0000 0000</div>
+        <div class="details">
+          <div class="name" id="name">Jane Appleseed</div>
+          <div class="cvc" id="date">  <small id="card-month">00</small>/<small id="card-year">00</small></div>
+        </div>
+      </div>
+      <div class="card-back">
+        <div class="cvc" id="cvc-card">000</div>
+      </div>
+    </div>
+
+    <!-- Confirmation message -->
+    <div class="content confirmation" id="confirmation">
+      <img src="images/icon-complete.svg" alt="">
+      <h1>Thank You!</h1>
+      <p>We've added your card details</p>
+      <div class="btn" id="continue">Continue</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

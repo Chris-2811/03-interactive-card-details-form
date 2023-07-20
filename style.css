@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+  /* Primary Colors */
+  --primary-linear-gradient: linear-gradient(
+    180deg,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+  --primary-red: hsl(0, 100%, 66%);
+
+  /* Neutral Colors */
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-light-grayish-violet: hsl(270, 3%, 87%);
+  --neutral-dark-grayish-violet: hsl(279, 6%, 55%);
+  --neutral-very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  display: none;
+}
+
+.background {
+  background: url('images/bg-main-mobile.png') no-repeat center center/cover;
+  height: 240px;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 91px 24px 45px 24px;
+}
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.form label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.wrapper {
+  background: transparent;
+  padding: 1px;
+  border-radius: 8px;
+  display: block;
+}
+
+.wrapper.focus {
+  background: var(--primary-linear-gradient);
+}
+
+.form input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-light-grayish-violet);
+  padding: 11px;
+  display: block;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form input::placeholder {
+  color: var(--neutral-dark-grayish-violet);
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.content .form-control small {
+  color: var(--primary-red);
+  display: none;
+}
+
+.content .form-control.error small {
+  display: block;
+}
+
+.container-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 11px;
+}
+
+.container-details .date {
+  display: flex;
+  gap: 8px;
+}
+
+.container-details .form-control {
+  width: 50%;
+}
+
+.btn {
+  background: var(--neutral-very-dark-violet);
+  color: var(--neutral-white);
+  width: 100%;
+  display: inline-block;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Cards */
+
+.card-front {
+  background: url(images/bg-card-front.png) no-repeat center center/cover;
+  min-width: 285px;
+  height: 157px;
+  color: #fff;
+  z-index: 2;
+  transform: translate(110px, 89px);
+}
+
+.card-front {
+  padding: 17.5px 21px 20.6px 19px;
+}
+
+.card-front .logo {
+  margin-bottom: 37px;
+  width: 54px;
+}
+
+.card-front .card-number {
+  font-size: 18px;
+  letter-spacing: 2.2px;
+}
+
+.card-front .details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.28px;
+}
+
+.card-back {
+  min-width: 285px;
+  height: 157px;
+  transform: translateX(-110px);
+  background: url(images/bg-card-back.png) no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+}
+
+.card-back .cvc {
+  position: absolute;
+  top: 49%;
+  right: 9%;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+}
+
+.card-container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 32px;
+}
+
+.form {
+  max-width: 381px;
+}
+
+/* Confirmation */
+
+.content.confirmation {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content.confirmation h1 {
+  margin-block: 35px 16px;
+  font-size: 28px;
+  letter-spacing: 3.42px;
+  text-transform: uppercase;
+  color: var(--neutral-very-dark-violet);
+}
+
+.content.confirmation p {
+  color: var(--neutral-dark-grayish-violet);
+  margin-bottom: 48px;
+}
+
+.content.confirmation .btn {
+  max-width: 300px;
+}
+
+@media (min-width: 1100px) {
+  body {
+    display: flex;
+    height: 100vh;
+  }
+
+  .background {
+    width: 33.5%;
+    min-height: 100%;
+    max-width: 483px;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .card-container {
+    width: 30%;
+    top: 390px;
+    left: 5%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 500px;
+  }
+
+  .form {
+    min-width: 381px;
+    max-width: 381px;
+    margin: 0;
+    margin-left: 140px;
+  }
+
+  .form-control .date {
+    gap: 10px;
+  }
+
+  .container-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .card-front {
+    width: 360px;
+    height: 200px;
+    transform: translate(0);
+    padding: 22px;
+  }
+
+  .card-front .logo {
+    width: 84px;
+    height: 47px;
+    margin-bottom: 44px;
+  }
+
+  .card-front .card-number {
+    font-size: 22px;
+    margin-bottom: 26px;
+  }
+
+  .card-front .details {
+    font-size: 12px;
+  }
+
+  .card-front small {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .card-back {
+    width: 360px;
+    height: 200px;
+    transform: translate(94px, 37px);
+  }
+
+  .card-back .cvc {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .content .form-control {
+    margin-bottom: 26px;
+  }
+
+  .content .form-control input {
+    font-size: 18px;
+  }
+
+  .content .btn {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form {
+    min-width: 381px;
+    max-width: 381px;
+    margin: 0;
+    margin-left: 120px;
+  }
+
+  .card-container {
+    width: 40%;
+    top: 350px;
+    left: 10%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 500px;
+  }
+
+  .card-front {
+    width: 447px;
+    height: 245px;
+    transform: translate(0);
+    padding: 28px 26px 27px 32px;
+  }
+
+  .card-front .details {
+    font-size: 14px;
+  }
+
+  .card-front .logo {
+    margin-bottom: 64px;
+  }
+
+  .card-front .card-number {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+
+  .card-back {
+    width: 447px;
+    height: 245px;
+    transform: translate(94px, 37px);
+  }
+
+  .card-back .cvc {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .form {
+    margin-left: 0px;
+  }
+}
