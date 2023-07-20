@@ -79,8 +79,9 @@ input[type='number']::-webkit-outer-spin-button {
   border-radius: 8px;
   border: 1px solid var(--neutral-light-grayish-violet);
   height: 45px;
-  padding: 16px;
+  padding: 11px 11px 11px 16px;
   display: block;
+  font-family: inherit;
 }
 
 .form input:focus {
